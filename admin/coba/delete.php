@@ -1,0 +1,38 @@
+<?php
+//delete.php
+$connect = mysqli_connect("localhost", "root", "", "lababersih");
+if (isset($_POST["employee_id"])) {
+    $output = '';
+    $query = "
+    DELETE from barang where id_barang = '" . $_POST["employee_id"] . "'
+    ";
+    if (mysqli_query($connect, $query)) {
+        $output .= '<label class="text-success">Data Berhasil Dihapus</label>';
+        $select_query = "SELECT * FROM barang ORDER BY id_barang DESC";
+        $result = mysqli_query($connect, $select_query);
+        $output .= '
+      <table class="table table-bordered">  
+                    <tr>  
+                         <th width="55%">Kode Barang</th>  
+                         <th width="15%">Lihat</th>  
+                         <th width="15%">Edit</th>  
+                         <th width="15%">Hapus</th>  
+                    </tr>
+     ';
+        while ($row = mysqli_fetch_array($result)) {
+            $output .= '
+       <tr>  
+                         <td>' . $row["kd_barang"] . '</td>  
+            <td><input type="button" name="view" value="Lihat Detail" id_barang="' . $row["id_barang"] . '" class="btn btn-info btn-xs view_data" /></td>
+            <td><input type="button" name="edit" value="Edit" id_barang="' . $row["id_barang"] . '" class="btn btn-warning btn-xs edit_data" /></td>                                     
+            <td><input type="button" name="delete" value="Hapus" id_barang="' . $row["id_barang"] . '" class="btn btn-danger btn-xs hapus_data" /></td>
+                      
+                    </tr>
+      ';
+        }
+        $output .= '</table>';
+    } else {
+        $output .= mysqli_error($connect);
+    }
+    echo $output;
+}
