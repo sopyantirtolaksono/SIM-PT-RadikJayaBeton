@@ -1,4 +1,4 @@
-# SIM Akuntansi  PT. Radik Jaya Beton
+# SIM Akuntansi PT. Radik Jaya Beton
 ![logo](https://github.com/sopyantirtolaksono/SIM-PT-RadikJayaBeton/blob/main/admin/assets/img/demo.PNG)
 
 ## Tentang
@@ -7,7 +7,7 @@
   - HTML
   - CSS
   - JavaScript
-  - PHP
+  - PHP Native
   - MySQL
   - Bootstrap
   - JQuery
