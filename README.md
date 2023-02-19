@@ -1,5 +1,5 @@
 # SIM Akuntansi  PT. Radik Jaya Beton
-[](https://github.com/sopyantirtolaksono/SIM-PT-RadikJayaBeton/blob/main/admin/assets/img/demo.PNG)
+![logo](https://github.com/sopyantirtolaksono/SIM-PT-RadikJayaBeton/blob/main/admin/assets/img/demo.PNG)
 
 ## Tentang
 - Aplikasi ini merupakan sebuah sistem informasi managemen akuntansi (SIM) berbasis web dengan studi kasus pada PT. Radik Jaya Beton
